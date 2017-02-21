@@ -18,19 +18,28 @@ Container: SearchBar
     + when we click button it just sends the state of component
 
 We need to initialize the state in the constructor:
-```  
+```
 constructor(props) {
   super(props);
   this.state = { term: '' };
+  // This is important to
+  this.onInputChange = this.onInputChange.bind(this);
 }
-```
 
-```
+
+onInputChange(event ){
+  super.setState({term: event.target.value})
+}
+...
 <input
   className="form-control"
   placeholder="Enter city to add to your custom list"
   value={this.state.term}
-  onChange={this.onInputChange}
+  onChange={this.onInputChange.bind(this)}
 />
 ```
 value is equal to this.state.term, term is not updated unless the onInputChange() function calls the setState() function
+
+It is important to bind 'this', whether it be in the constructor or on the calback itself.
+
+ 
