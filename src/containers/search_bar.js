@@ -14,10 +14,16 @@ export default class SearchBar extends Component {
     this.setState({term: event.target.value});
   }
 
+  onFormSubmit(event) {
+    // to stop post request to server from form submit
+    event.preventDefault();
+    console.log("submitted!");
+  }
+
 
   render() {
     return (
-      <form className="input-group">
+      <form onSubmit={this.onFormSubmit} className="input-group">
         <input
           className="form-control"
           placeholder="Enter city to add to your custom list"

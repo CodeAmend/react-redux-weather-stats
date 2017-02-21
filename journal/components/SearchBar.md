@@ -42,4 +42,4 @@ value is equal to this.state.term, term is not updated unless the onInputChange(
 
 It is important to bind 'this', whether it be in the constructor or on the calback itself.
 
- 
+ form submit automatically submits a POST request to the server. So it is important preventDefault() if we do not want that behavior.
