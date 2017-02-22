@@ -19,3 +19,6 @@ Reducer calls the 'glue' and creates => global app state
   * payload: request
 
 We must connect this with redux now, for a App-wide access.
+* since the state will be an array of city data, we need to default state = [] instead of null
+* we need to concat state which in short hand [payload, ...state]
+  * this is the same as state.concat([payload])
