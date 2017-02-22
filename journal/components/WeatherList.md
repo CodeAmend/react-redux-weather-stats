@@ -1,0 +1,1 @@
+![]('../reducers/mockup.png')
