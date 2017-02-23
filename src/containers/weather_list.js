@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import ChartMaker from '../components/chart_maker';
+import GoogleMap from '../components/google_map';
 
 class WeatherList extends Component {
 
@@ -10,10 +11,11 @@ class WeatherList extends Component {
     const humiditys = weatherObj.list.map((weather) => weather.main.humidity);
     const pressures = weatherObj.list.map((weather) => weather.main.pressure);
     const name = weatherObj.city.name;
+    const {lon, lat} = weatherObj.city.coord;
 
     return (
       <tr key={name}>
-        <td>{name}</td>
+        <td><GoogleMap lat={lat} lon={lon}/></td>
         <td>
           <ChartMaker data={temps} unit="K" color="red" />
         </td>
