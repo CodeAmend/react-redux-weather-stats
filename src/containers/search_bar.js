@@ -16,6 +16,7 @@ class SearchBar extends Component {
 
   onInputChange(event) {
     this.setState({term: event.target.value});
+
   }
 
   onFormSubmit(event) {
@@ -37,7 +38,7 @@ class SearchBar extends Component {
           />
         <span className="input-group-btn">
           <button
-            type="submit" 
+            type="submit"
             className="btn btn-secondary"
             >Submit
           </button>
