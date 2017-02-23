@@ -15,13 +15,13 @@ class WeatherList extends Component {
       <tr key={name}>
         <td>{name}</td>
         <td>
-          <ChartMaker data={temps} color="red" />
+          <ChartMaker data={temps} unit="K" color="red" />
         </td>
         <td>
-          <ChartMaker data={humiditys} color="orange" />
+          <ChartMaker data={humiditys} unit="hPa" color="orange" />
         </td>
         <td>
-          <ChartMaker data={pressures} color="blue" />
+          <ChartMaker data={pressures} unit="P" color="blue" />
         </td>
       </tr>
     );
