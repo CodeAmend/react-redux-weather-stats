@@ -34,7 +34,8 @@ class SearchBar extends Component {
         className="input-group">
         <input
           className="form-control"
-          placeholder="Enter city to add to your custom list" value={this.state.term} onChange={this.onInputChange.bind(this)}
+          placeholder="Enter city to add to your custom list"
+          value={this.state.term} onChange={this.onInputChange.bind(this)}
           />
         <span className="input-group-btn">
           <button
